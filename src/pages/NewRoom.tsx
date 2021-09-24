@@ -6,10 +6,15 @@ import googleIconImg from "../assets/images/google-icon.svg";
 
 // todas as importações são feitas pelo js
 
-import "../styles/auth.scss";
 import { Button } from "../components/Button";
 
+import "../styles/auth.scss";
+import { useContext } from "react";
+import { AuthContext } from "../App";
+
 export function NewRoom() {
+  const { user } = useContext(AuthContext);
+
   return (
     <div id="page-auth">
       <aside>
